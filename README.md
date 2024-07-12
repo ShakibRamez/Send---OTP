@@ -1,2 +1,2 @@
 # Send---OTP
-number verification with fire base 
+number verification with javascript on firebase 
