@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto;300,400,500,700"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="firebase.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="verification.php">
+      <h1>Firebase Phone number</h1>
+      <div class="formcontainer">
+        <hr />
+        <div class="container">
+          <label for="uname">phone number</label>
+          <input
+            type="text"
+            id="number"
+            placeholder="Enter You number"
+            name="uname"
+            required
+          />
+          <div id="recaptcha-container"></div>
+        </div>
+        <button type="button" onclick="phoneAuth()">Send otp</button>
+      </div>
+    </form>
+
+    <form>
+      <div class="formcontainer">
+        <hr />
+        <div class="container">
+          <input
+            type="text"
+            id="verification"
+            placeholder="Enter Your Verificatiion code"
+          />
+        </div>
+        <button type="button" onclick="codeverify()">verify code</button>
+      </div>
+    </form>
+  </body>
+</html>
